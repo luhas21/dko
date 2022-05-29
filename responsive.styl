@@ -1,0 +1,422 @@
+
+// Menu Opener
+
+#menu-opener
+	display none
+	position absolute
+	z-index 101
+	right 24px
+	top 16px
+	width 40px
+	height 40px
+	&:hover
+		cursor pointer
+	&::before
+	&::after
+	span
+		display inline-block
+		position absolute
+		content ""
+		right 0
+		width 40px
+		height 3px
+		background-color var(--black)
+		transition transform .3s, opacity .3s, background-color .3s
+	&::before
+		top 8px
+	span
+		top 17px
+	&::after
+		top 26px
+	&:hover
+		&::before
+		&::after
+		span
+			background-color var(--red)
+		.menu-text
+			color var(--red) !important
+	.menu-text
+		margin-top 36px
+		text-transform uppercase
+		background none
+		height auto
+		transition color .3s
+
+// Menu Opened
+
+body.menu-opened
+	#menu-opener
+		&::before
+		&::after
+		span
+			width 38px
+		&::before
+			transform translate(0px, 9px) rotate(-45deg)
+		&::after
+			transform translate(0px, -9px) rotate(45deg)
+		span
+			opacity 0
+		
+
+
+
+// Header & Main Menu
+
+@media (max-width: 1366px)
+	header .header-main .logo
+		min-width initial
+
+@media (max-width: 1280px)
+	header .header-banner
+		font-size 18px
+		.wrapper
+			.phone
+			.mail
+			.facebook
+			.messanger
+			.instagram
+				&::before
+					background-size 75%
+					margin-right 6px
+			.icostrov
+				display none
+			.social-links
+				justify-content flex-end
+
+	header .header-main
+		.logo
+			max-width 150px
+		.main-menu
+			margin 16px 0
+		nav a span[class^='ico-']
+			display none
+		.header-info
+			margin-top 16px
+
+@media (max-width: 940px)
+	#menu-opener
+		display block
+	body.menu-opened
+		overflow hidden
+		header
+			.menu-wrapper-responsive
+				display flex
+
+	header .header-main
+		.logo
+			margin-right 0
+		.menu-wrapper-responsive
+			display none
+			position fixed
+			z-index 101
+			left 0
+			right 0
+			top 72px
+			bottom 0
+			background-color var(--white)
+			overflow auto
+			text-align center
+			flex-wrap wrap
+			align-items center
+			justify-content center
+			nav
+				display block
+				a
+					width auto
+					margin 8px 0
+					font-size 24px
+					span:not([class^='ico-'])
+						margin-right 0
+		nav.sub-menu
+			display block
+			margin-top 96px
+			text-align right
+			margin-right 8px
+			a
+				display inline-block
+				vertical-align middle
+				width auto
+				span:not([class^='ico-'])
+					margin-right 0
+					padding-left 32px
+					&::after
+						display none
+		.header-info
+			display none
+		.category-image
+			display block
+			position absolute
+			right 96px
+			top 36px
+			span[class^='ico-']::before
+				transform scale(0.8)
+
+@media (max-width: 640px)
+	header
+		.header-banner
+			font-size 16px
+			.wrapper
+				display block
+				padding 8px 6px
+				position relative
+				.phone
+				.mail
+				.messanger
+				.facebook
+				.instagram
+					&::before
+						background-size 50%
+						margin-right 0
+				.phone
+					width 100%
+				.mail
+					width 100%
+					margin-top -8px
+					text-align left
+				.icostrov
+					display none
+				.social-links
+					position absolute
+					right 4px
+					top 8px
+					.facebook
+					.instagram
+						margin-left -8px
+
+		.header-main
+			.menu-wrapper-responsive
+				top 88px
+			.logo
+				padding-bottom 0
+
+@media (max-width: 375px)
+	header .header-main
+		.logo
+			max-width 120px
+
+
+
+
+// Footer
+
+@media (max-width: 940px)
+	footer
+		padding-bottom 24px
+		.footer-address
+			width 100%
+		.footer-newsletter
+		.footer-menu
+			display none
+
+@media (max-width: 480px)
+	footer .footer-address
+		display block
+		p
+			width 100%
+			&:not(:last-child)
+				margin-bottom 32px
+		a
+			margin-top 16px
+
+@media (max-width: 340px)
+	header .header-main nav.sub-menu a span:not([class^='ico-'])
+		padding-left 0
+
+
+
+
+// Components
+
+@media (max-width: 1024px)
+	.buy-button
+		padding-left 0
+		a
+			display inline-block
+			vertical-align middle
+			font-size 18px
+			&::after
+				transform scale(0.7)
+				margin-left 0
+
+
+
+// Content
+
+@media (max-width: 1280px)
+	.entry-content
+		h1
+			font-size 36px
+		h2
+			font-size 30px
+		h3
+			font-size 22px
+		p
+			font-size 18px
+		.float-left
+			margin-right 24px
+		.float-right
+			margin-left 24px
+
+@media (max-width: 1023px)
+	.entry-content
+		.float-left
+		.float-right
+			float none
+			margin-left 0
+			margin-right 0
+
+@media (max-width: 1023px)
+	.main
+		display block
+		.main-side
+			margin-right 0
+			min-width initial
+			.slider
+			.flyer
+				display none
+
+@media (max-width: 940px)
+	.main
+		margin 32px auto
+
+
+
+
+
+// Intro
+
+@media (max-width: 940px)
+	.intro .intro-events .intro-events-item
+		width 50%
+		padding-top 33%
+
+@media (max-width: 640px)
+	.intro .intro-events .intro-events-item
+		width 100%
+		padding-top 66%
+
+
+
+
+// Events
+
+@media (max-width: 1440px)
+	.list .list-item
+		flex-wrap wrap
+		align-items flex-start
+		.text
+			width calc(100% - 210px)
+		.category-image
+			margin-top 32px
+			margin-right 32px
+			height 52px
+			padding-bottom 0
+			min-width initial
+			display flex
+			align-items center
+			span[class^='ico-']
+				display inline-block
+				transform none
+			a
+				display inline-block
+				vertical-align middle
+				margin-top 0
+				margin-left 24px
+				padding 8px 36px
+		.buy-button
+			padding-left 0
+
+	.list.not-events .list-item
+		display block
+		overflow hidden
+		.image
+			float left
+		.title
+			float left
+			width calc(100% - 240px)
+		.text
+			width calc(100% - 240px)
+			float left
+			margin-bottom 8px
+		.category-image
+			clear both
+			margin-left calc(240px + 32px)
+		.title.big h2
+			font-size 28px
+			margin-bottom 16px
+		.text.big
+		&.toggle .text .text-toggle .medium
+			font-size 16px
+		&.toggle .text .text-toggle .big
+			font-size 18px
+
+
+@media (max-width: 640px)
+	.list .list-item
+		justify-content space-between
+		.image
+			width 100%
+			img
+				width 100%
+				height auto
+		.text
+			width 100%
+			padding 24px 0 0
+		.buy-button
+			min-width initial
+			margin-right -8px
+	
+	.list.not-events .list-item
+		.image
+		.title
+		.text
+			float none
+			width 100%
+		.title
+			margin-left 0
+			margin-top 16px
+			margin-bottom 0
+			max-width initial
+		.text
+			padding-top 0
+		.category-image
+			margin-left 0
+
+@media (max-width: 414px)
+	.list .list-item
+		.category-image
+			margin-right 0
+			span[class^='ico-']
+				display none
+			a
+				margin-left 0
+
+
+
+
+// Event Detail
+
+@media (max-width: 1280px)
+	.event-detail
+		display block
+		.event-text
+			width 100%
+			margin-bottom 32px
+			margin-right 0
+			p
+				font-size 18px
+		.event-image
+			width 100%
+
+@media (max-width: 1024px)
+	.event-detail
+		.event-bottom
+			padding-top 24px
+			.event-dates .event-dates-item
+				.date
+					font-size 18px
+				.buy-button
+					padding-left 16px
+					margin-right -8px
+			.category-image
+				display none

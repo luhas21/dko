@@ -1,0 +1,9 @@
+# Ignore the Mac files
+.DS_Store
+
+# Ignore the node_modules directory
+node_modules/
+package-lock.json
+
+# Ignore the bundled-asset folder content (not the folder)
+bundled-assets/*

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Bubble_Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DKO_podklady_loga_piktogramy" transform="translate(-933.000000, -365.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M946.737,365.18 C939.151,365.18 933.001,370.929 933.001,378.028 C933.001,382.06 934.994,385.668 938.101,388.024 L938.101,392.936 L942.794,390.333 C944.045,390.68 945.369,390.874 946.737,390.874 C954.324,390.874 960.473,385.125 960.473,378.027 C960.474,370.929 954.324,365.18 946.737,365.18 Z M948.186,382.407 L944.631,378.719 L937.791,382.505 L945.289,374.545 L948.844,378.232 L955.683,374.449 L948.186,382.407 Z" id="Bubble_Shape"></path>
+        </g>
+    </g>
+</svg>
