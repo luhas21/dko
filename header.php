@@ -22,12 +22,12 @@
 	<link rel="stylesheet" href="<?php echo get_theme_file_uri('/responsive.css') ?>">
 
 	<!-- Tiny Slider -->
-	<link rel="stylesheet" type="text/css" href="tiny-slider/tiny-slider.css"/>
-	<script type="text/javascript" src="tiny-slider/tiny-slider.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_theme_file_uri('/tiny-slider/tiny-slider.css') ?>"/>
+	<script type="text/javascript" src="<?php echo get_theme_file_uri('/tiny-slider/tiny-slider.js') ?>"></script>
 
 	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="<?php echo get_theme_file_uri('/script.js') ?>"></script>
 
     <?php wp_head(); ?>
 
@@ -67,7 +67,7 @@
 
 			<div class="menu-wrapper-responsive">
 				<nav class="main-menu">
-					<a href="<?php echo get_home_url(get_current_blog_id()); ?>" class="current"><span class="ico-akce"></span><span>Akce</span></a>
+					<a href="<?php echo get_home_url(get_current_blog_id()).'/category'; ?>" class="current"><span class="ico-akce"></span><span>Akce</span></a>
 					<a href="<?php echo get_category_link(get_cat_ID('Kino')); ?>"><span class="ico-kino"></span><span>Kino</span></a>
 					<a href="#"><span class="ico-sluzby"></span><span>Služby</span></a>
 					<a href="#"><span class="ico-kluby"></span><span>Kluby</span></a>

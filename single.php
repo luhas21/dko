@@ -1,5 +1,6 @@
 
-<?php include 'header.php'; ?>
+<?php //include 'header.php';
+get_header(); ?>
 
 
 <section class="main">
@@ -30,42 +31,66 @@
 
 		<div class="event-bottom">
 			<div class="event-dates">
+				<?php if(get_field('event_date')) { ?>
 				<div class="event-dates-item">
-					<span class="date">	
-					<?php
-					$eventDate = new DateTime(get_field('event_date'));
-						echo $eventDate->format('l') . ' ';
-						echo $eventDate->format('j') . '.';
-						echo $eventDate->format('n') . '.';
-						echo $eventDate->format('Y');
-						echo ' / '; 
-					$eventTime = new DateTime(get_field('event_time'));
-						echo $eventTime->format('G') . ':';
-						echo $eventTime->format('i');
-						echo ' / '; 
-						echo get_field('event_place'); ?></span>
+					<span class="date">	<?php
+						$eventDate = new DateTime(get_field('event_date'));
+							echo get_day_name($eventDate->format('l')) . ' ';
+							echo $eventDate->format('j') . '.';
+							echo $eventDate->format('n') . '.';
+							echo $eventDate->format('Y');
+							echo ' / '; 
+						$eventTime = new DateTime(get_field('event_time'));
+							echo $eventTime->format('G') . ':';
+							echo $eventTime->format('i');
+							echo ' / '; 
+							echo get_field('event_place');?>
+					</span>
 					<div class="buy-button">
 						<a href="#">Koupit</a>
 					</div>
 				</div>
+				<?php } 
+				if(get_field('event_date_2')) { ?>
 				<div class="event-dates-item">
-					<span class="date">Čtvrtek 2. 3. 2022 / 15:00 / Dům kultury Ostrov</span>
+					<span class="date">	<?php
+						$eventDate = new DateTime(get_field('event_date_2'));
+							echo get_day_name($eventDate->format('l')) . ' ';
+							echo $eventDate->format('j') . '.';
+							echo $eventDate->format('n') . '.';
+							echo $eventDate->format('Y');
+							echo ' / '; 
+						$eventTime = new DateTime(get_field('event_time_2'));
+							echo $eventTime->format('G') . ':';
+							echo $eventTime->format('i');
+							echo ' / '; 
+							echo get_field('event_place');?>
+					</span>
 					<div class="buy-button">
 						<a href="#">Koupit</a>
 					</div>
 				</div>
+				<?php }
+				if(get_field('event_date_3')) { ?>
 				<div class="event-dates-item">
-					<span class="date">Středa 2. 3. 2022 / 15:00 / Dům kultury Ostrov</span>
+					<span class="date">	<?php
+						$eventDate = new DateTime(get_field('event_date_3'));
+							echo get_day_name($eventDate->format('l')) . ' ';
+							echo $eventDate->format('j') . '.';
+							echo $eventDate->format('n') . '.';
+							echo $eventDate->format('Y');
+							echo ' / '; 
+						$eventTime = new DateTime(get_field('event_time_3'));
+							echo $eventTime->format('G') . ':';
+							echo $eventTime->format('i');
+							echo ' / '; 
+							echo get_field('event_place'); ?>
+					</span>
 					<div class="buy-button">
 						<a href="#">Koupit</a>
 					</div>
 				</div>
-				<div class="event-dates-item">
-					<span class="date">Středa 2. 3. 2022 / 15:00 / Dům kultury Ostrov</span>
-					<div class="buy-button">
-						<a href="#">Koupit</a>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
 			<div class="category-image">
 			<?php
@@ -82,4 +107,5 @@
 </section>
 
 
-<?php include 'footer.php'; ?>
+<?php //include 'footer.php'; 
+get_footer(); ?>

@@ -85,6 +85,13 @@ get_header(); ?>
 	<?php 
         $futureEvents = new WP_Query(array(
           'post_type' => 'post',
+		  'tax_query' => array(
+			  array(
+				  'taxonomy' => 'category',
+				  'field'    => 'term_id',
+				  'terms'    => get_the_category()[0]->term_id,
+				  ),
+			  ),
           'meta_query' => array(
               'relation' => 'AND',
               'event_date' =>array(
@@ -126,7 +133,8 @@ get_header(); ?>
 					echo $presaleDate->format('Y');
 					echo '</span>';
 				}
-				?>			</div>
+				?>				
+			</div>
 			<div class="text">
 				<a href="<?php echo get_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 				<span class="event-info">
@@ -180,12 +188,11 @@ get_header(); ?>
 					} ?></p>
 				<?php } ?>
 				</p>
-				<a href="<?php echo get_permalink(); ?>" class="more-info">více informací</a>
 			</div>
 			<div class="category-image">
 				<?php echo get_cat_ico_class(esc_html( get_the_category()[0]->name ));
 				if (!empty( get_the_category())){
-					echo '<a href="' . esc_url(get_category_link( get_the_category()[0]->term_id)) . '">' . esc_html(get_the_category()[0]->name) . '</a>';
+					echo '<a href="' . get_permalink() . '" class="more-info">VÍCE INFORMACÍ</a>';
 				} ?>
 			</div>
 			<div class="buy-button">

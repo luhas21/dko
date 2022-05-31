@@ -665,6 +665,7 @@ footer .footer-menu img {
 }
 .slider .image-wrapper {
   position: relative;
+  max-width: 375px;
 }
 .slider .image-wrapper .event-info {
   position: absolute;

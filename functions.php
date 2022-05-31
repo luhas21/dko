@@ -5,43 +5,43 @@
 
 function get_cat_ico_class($categoryName){
   switch ($categoryName) {
-    case 'Výstavy':
+    case 'výstavy':
       return '<span class="ico-vystavy"></span>';
       break;
-    case 'Kino':
+    case 'kino':
       return '<span class="ico-kino"></span>';
       break;
-    case 'Koncerty':
+    case 'koncerty':
       return '<span class="ico-koncerty"></span>';
       break;
-    case 'Divadlo':
+    case 'divadlo':
       return '<span class="ico-divadlo"></span>';
       break;
-    case 'Pro děti':
+    case 'pro děti':
       return '<span class="ico-deti"></span>';
       break;
-    case 'Osobní rozvoj':
+    case 'osobní rozvoj':
       return '<span class="ico-rozvoj"></span>';
       break;
-    case 'Akce':
+    case 'akce':
       return '<span class="ico-akce"></span>';
       break;
-    case 'Inzerce':
+    case 'inzerce':
       return '<span class="ico-inzerce"></span>';
       break;
-    case 'Reklama':
+    case 'reklama':
       return '<span class="ico-reklama"></span>';
       break;
-    case 'Pronájem':
+    case 'pronájem':
       return '<span class="ico-pronajem"></span>';
       break;
-    case 'Služby':
+    case 'služby':
       return '<span class="ico-sluzby"></span>';
       break;
-    case 'Svatby':
+    case 'svatby':
       return '<span class="ico-svatby"></span>';
       break;
-    case 'Foto':
+    case 'foto':
       return '<span class="ico-foto"></span>';
       break;
     default:
@@ -49,6 +49,39 @@ function get_cat_ico_class($categoryName){
   }
 }
 
+function get_day_name($den)
+{
+  switch ($den) {
+    case 'Monday':
+      return 'Pondělí';
+      break;
+    case 'Tuesday':
+      return 'Úterý';
+      break;
+      
+    case 'Wednesday':
+      return 'Středa';
+      break;
+
+    case 'Thursday':
+      return 'Čtvrtek';
+      break;
+
+    case 'Friday':
+      return 'Pátek';
+      break;
+
+    case 'Saturday':
+      return 'Sobota';
+      break;
+
+    case 'Sunday':
+      return 'Neděle';
+      break;
+    default:
+      return 0;
+    }
+} 
 
 /*
 require get_theme_file_path('/inc/private-site.php');
